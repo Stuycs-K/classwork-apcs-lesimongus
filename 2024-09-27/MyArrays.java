@@ -1,7 +1,8 @@
 public class MyArrays{
   public static void main(String[] args) {
-    int[] array1 = {1, 2, 3, 4, 5};
-    System.out.println(arrayToString(array1));
+    int[] test = {};
+    int[] test1 = {1, 2, 3, 4, 5};
+    itn[] test2 = {4, 8, 14, 53, 21};
   }
   public static String arrayToString(int[] nums){
     String arrString = "[";
@@ -12,5 +13,11 @@ public class MyArrays{
       }
     }
     return arrString + "]";
+  }
+  public static int[] returnCopy(int[] ary){
+    int[] newAry = new int[ary.length];
+    for (int i = 0; i < ary.length; i++){
+      newAry[i] = 
+    }
   }
 }
