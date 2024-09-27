@@ -1,6 +1,7 @@
 public class MyArrays{
   public static void main(String[] args) {
-    System.out.println(arrayToString([1, 2, 3, 4]));
+    int[] array1 = {1, 2, 3, 4, 5};
+    System.out.println(arrayToString(array1));
   }
   public static String arrayToString(int[] nums){
     String arrString = "[";
