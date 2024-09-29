@@ -2,7 +2,7 @@ public class MyArrays{
   public static void main(String[] args) {
     int[] test = {};
     int[] test1 = {1, 2, 3, 4, 5};
-    itn[] test2 = {4, 8, 14, 53, 21};
+    int[] test2 = {4, 8, 14, 53, 21};
     System.out.println(test);
     System.out.println(returnCopy(test));
     System.out.println(test1);
