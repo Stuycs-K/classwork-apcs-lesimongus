@@ -3,6 +3,12 @@ public class MyArrays{
     int[] test = {};
     int[] test1 = {1, 2, 3, 4, 5};
     itn[] test2 = {4, 8, 14, 53, 21};
+    System.out.println(test);
+    System.out.println(returnCopy(test));
+    System.out.println(test1);
+    System.out.println(returnCopy(test1));
+    System.out.println(test2);
+    System.out.println(returnCopy(test2));
   }
   public static String arrayToString(int[] nums){
     String arrString = "[";
@@ -17,7 +23,8 @@ public class MyArrays{
   public static int[] returnCopy(int[] ary){
     int[] newAry = new int[ary.length];
     for (int i = 0; i < ary.length; i++){
-      newAry[i] = 
+      newAry[i] = ary[i];
     }
+    return newAry;
   }
 }
