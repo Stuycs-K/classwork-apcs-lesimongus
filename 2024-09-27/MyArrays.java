@@ -15,6 +15,8 @@ public class MyArrays{
     System.out.println(arrayToString(test2));
     System.out.println(returnCopy(test2));
     System.out.println(arrayToString(returnCopy(test2)));
+    System.out.println(arrayToString(concatArray(test1, test2)));
+    System.out.println(arrayToString(concatArray(test2, test1)));
   }
   public static String arrayToString(int[] nums){
     String arrString = "[";
@@ -30,6 +32,16 @@ public class MyArrays{
     int[] newAry = new int[ary.length];
     for (int i = 0; i < ary.length; i++){
       newAry[i] = ary[i];
+    }
+    return newAry;
+  }
+  public static int[] concatArray(int[] ary1, int[] ary2){
+    int[] newAry = new int[ary1.length + ary2.length];
+    for (int i = 0; i < ary1.length; i++){
+      newAry[i] = ary1[i];
+    }
+    for (int i = ary1.length; i < ary2.length; i++){
+      newAry[i] = ary2[i - ary1.length];
     }
     return newAry;
   }
