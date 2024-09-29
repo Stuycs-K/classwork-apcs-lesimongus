@@ -4,11 +4,17 @@ public class MyArrays{
     int[] test1 = {1, 2, 3, 4, 5};
     int[] test2 = {4, 8, 14, 53, 21};
     System.out.println(test);
+    System.out.println(arrayToString(test));
     System.out.println(returnCopy(test));
+    System.out.println(arrayToString(returnCopy(test)));
     System.out.println(test1);
+    System.out.println(arrayToString(test1));
     System.out.println(returnCopy(test1));
+    System.out.println(arrayToString(returnCopy(test1)));
     System.out.println(test2);
+    System.out.println(arrayToString(test2));
     System.out.println(returnCopy(test2));
+    System.out.println(arrayToString(returnCopy(test2)));
   }
   public static String arrayToString(int[] nums){
     String arrString = "[";
