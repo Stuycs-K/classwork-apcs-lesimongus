@@ -3,6 +3,8 @@ public class MyArrays{
     int[] test = {};
     int[] test1 = {1, 2, 3, 4, 5};
     int[] test2 = {4, 8, 14, 53, 21};
+    int[] test3 = {3, 8, 6};
+    int[] test4 = {8, 9, 1, 4, 5, 16, 17, 20, 19};
     System.out.println(test);
     System.out.println(arrayToString(test));
     System.out.println(returnCopy(test));
@@ -15,8 +17,19 @@ public class MyArrays{
     System.out.println(arrayToString(test2));
     System.out.println(returnCopy(test2));
     System.out.println(arrayToString(returnCopy(test2)));
+    System.out.println(test3);
+    System.out.println(arrayToString(test3));
+    System.out.println(returnCopy(test3));
+    System.out.println(arrayToString(returnCopy(test3)));
+    System.out.println(test4);
+    System.out.println(arrayToString(test4));
+    System.out.println(returnCopy(test4));
+    System.out.println(arrayToString(returnCopy(test4)));
     System.out.println(arrayToString(concatArray(test1, test2)));
     System.out.println(arrayToString(concatArray(test2, test1)));
+    System.out.println(arrayToString(concatArray(test3, test2)));
+    System.out.println(arrayToString(concatArray(test4, test)));
+    System.out.println(arrayToString(concatArray(test4, test2)));
   }
   public static String arrayToString(int[] nums){
     String arrString = "[";
@@ -40,7 +53,7 @@ public class MyArrays{
     for (int i = 0; i < ary1.length; i++){
       newAry[i] = ary1[i];
     }
-    for (int i = ary1.length; i < ary2.length; i++){
+    for (int i = ary1.length; i < ary1.length + ary2.length; i++){
       newAry[i] = ary2[i - ary1.length];
     }
     return newAry;
