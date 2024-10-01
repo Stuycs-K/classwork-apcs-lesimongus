@@ -2,10 +2,11 @@ public class ArrayMethods{
   //Simon Liu: simonl105@nycstudents.net
   //Adi Murgescu: adrianm199@nycstudents.net
   public static void main(String[] args){
+    int[] singtest = {1, 2, 3};
     int[][] test = {{}, {}};
     int[][] test1 = {{1,2,3}, {23, 4, 7}, {16, 15, 3}};
     int[][] test2 = {{1, 2}, {2, 7, 5, 6}, {}};
-    System.out.println(arrToString({1,2,3,4,5}));
+    System.out.println(arrToString(singtest));
     System.out.println(arrToString(test));
     System.out.println(arrToString(test1));
     System.out.println(arrToString(test2));
@@ -31,7 +32,9 @@ public class ArrayMethods{
   public static String arrToString(int[][]ary){
     String output = "[";
     for (int i = 0; i < ary.length; i++){
-      output += arrToString[ary[i]];
+      output += arrToString(ary[i]);
+      if (i < ary.length-1){
+        output+= ", ";
     }
     return output + "]";
   }
