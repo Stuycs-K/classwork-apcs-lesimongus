@@ -10,6 +10,9 @@ public class ArrayMethods{
     System.out.println(arrToString(test));
     System.out.println(arrToString(test1));
     System.out.println(arrToString(test2));
+    System.out.println(arr2DSum(test));
+    System.out.println(arr2DSum(test1));
+    System.out.println(arr2DSum(test2));
   }
   public static String arrToString(int[] ary){
     String arrString = "[";
@@ -41,10 +44,16 @@ public class ArrayMethods{
   }
 
   /*Return the sum of all of the values in the 2D array */
-//  public static int arr2DSum(int[][]nums){
+  public static int arr2DSum(int[][]nums){
     //use a nested loop to solve this
-//    return null;//place holder return value so it compiles.
-//  }
+    int arrSum = 0;
+    for (int i = 0; i < nums.length; i++){
+      for (int j = 0; j < nums[i].length; j++){
+        arrSum+= nums[i][j];
+      }
+    }
+    return arrSum;//place holder return value so it compiles.
+  }
 
   /**Rotate an array by returning a new array with the rows and columns swapped.
     * You may assume the array is rectangular and neither rows nor cols is 0.
