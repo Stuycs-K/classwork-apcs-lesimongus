@@ -35,14 +35,15 @@ public class ArrayMethods{
       output += arrToString(ary[i]);
       if (i < ary.length-1){
         output+= ", ";
+      }
     }
     return output + "]";
   }
 
   /*Return the sum of all of the values in the 2D array */
-  //public static int arr2DSum(int[][]nums){
+//  public static int arr2DSum(int[][]nums){
     //use a nested loop to solve this
-    //return null;//place holder return value so it compiles.
+//    return null;//place holder return value so it compiles.
 //  }
 
   /**Rotate an array by returning a new array with the rows and columns swapped.
