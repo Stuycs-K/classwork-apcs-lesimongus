@@ -104,6 +104,13 @@ public class ArrayMethods{
   //You SHOULD write a helper method for this.
   //If you don't see a good way to do that, you should stop and look at prior methods.
   public static int[][] copy(int[][] nums){
-    return null;//placeholder so it compiles
+    int[][] newArr = new int[nums.length][];
+    for (int i = 0; i < nums.length; i++){
+      newArr[i] = new int[nums[i].length];
+      for (int j = 0; j < nums[i].length; j++){
+        newArr[i][j] = nums[i][j];
+      }
+    }
+    return newArr;
   }
 }
