@@ -21,10 +21,6 @@ public class ArrayMethods{
     System.out.println(arrToString(swapRC(test3)));
     System.out.println(arrToString(swapRC(test4)));
     int[][] test5 = {{3, 5, -8}, {-1, -5, 6}, {1, 2, -3}};
-<<<<<<< HEAD
-    int[][] negativeReplace = replaceNegative(test5);
-    return negativeReplace;
-=======
     System.out.println(arrToString(test5));
     replaceNegative(test5);
     System.out.println(arrToString(test5));
@@ -45,7 +41,6 @@ public class ArrayMethods{
     System.out.println(arrToString(copy(test7)));
     System.out.println(test7);
     System.out.println(copy(test7));
->>>>>>> 828c93357184aee795020386fb037ef46b9282fb
   }
   public static String arrToString(int[] ary){
     String arrString = "[";
