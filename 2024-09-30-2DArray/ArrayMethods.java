@@ -22,7 +22,7 @@ public class ArrayMethods{
     System.out.println(arrToString(swapRC(test4)));
     int[][] test5 = {{3, 5, -8}, {-1, -5, 6}, {1, 2, -3}};
     int[][] negativeReplace = replaceNegative(test5);
-    System.out.println(arrToString(negativeReplace));
+    return negativeReplace;
   }
   public static String arrToString(int[] ary){
     String arrString = "[";
