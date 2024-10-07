@@ -71,13 +71,18 @@ public class ArrayDemo{
   //DO NOT use any built in methods that "copy" an array.
   //You SHOULD write a helper method for this.
   //If you don't see a good way to do that, you should stop and look at prior methods.
+  public static int[] copy(int[] nums){
+    int[] copyArray = new int[nums.length];
+    for (int i = 0; i < nums.length; i++){
+      copyArray[i] = nums[i];
+    }
+    return copyArray;
+    }
+
   public static int[][] copy(int[][] nums){
     int[][] newArr = new int[nums.length][];
     for (int i = 0; i < nums.length; i++){
-      newArr[i] = new int[nums[i].length];
-      for (int j = 0; j < nums[i].length; j++){
-        newArr[i][j] = nums[i][j];
-      }
+      newArr[i] = copy(nums[i]);
     }
     return newArr;
   }
