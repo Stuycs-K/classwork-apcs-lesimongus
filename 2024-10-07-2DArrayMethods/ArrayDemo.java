@@ -102,7 +102,6 @@ public class ArrayDemo{
     }
     return newArr;
   }
-}
 
 
   //5. Rotate an array by returning a new array with the rows and columns swapped.
