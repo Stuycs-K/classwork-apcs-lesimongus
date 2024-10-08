@@ -5,7 +5,9 @@ public class ArrayDemo{
     //You can now use Arrays.toString(yourArray) instead of writing arrayToString again.
     //Compare Arrays.toString(yourArray) to YOUR arrayToString() method to make sure yours is correct
     //do not use any other Arrays.method()
-
+    int[][] test1 = {{2, 4, 3}, {0, 0, 1}, {7, 3, 1}};
+    System.out.println(Arrays.deepToString(test1));
+    System.out.println(arrToString(test1));
   }
 
   //0. Include your prior methods to help you print a 1D/2D array of ints.
@@ -36,14 +38,28 @@ public class ArrayDemo{
 
   //1. Calculate and return how many elements equal zero in the 2D array.
   public static int countZeros2D(int[][] nums){
-    return 0;
+    int numZero = 0;
+    for (int i = 0; i < nums.length; i++){
+      for (int j = 0; j < nums[i].length; j++){
+        if (nums[i][j] == 0){
+          numZero++;
+        }
+      }
+    }
+    return numZero;
   }
 
   //2. Calculate the sum of a 2d array
   /*Return the sum of all of the values in the 2D array
    *Use a nested loop instead of a helper method*/
   public static int arr2DSum(int[][]nums){
-    return 0;
+    int arrSum = 0;
+    for (int i = 0; i < nums.length; i++){
+      for (int j = 0; j < nums[i].length; j++){
+        arrSum+= nums[i][j];
+      }
+    }
+    return arrSum;
   }
 
   //3. Modify a given 2D array of integer as follows:
@@ -108,7 +124,18 @@ public class ArrayDemo{
   //   Note there is no whitespace in the string, it all one line with no spaces/tabs.
   //   e.g. htmlTable(new int[][]{{1,2},{3}})  returns:
   // "<table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr></table>"
+  public static String htmlTable(int[] nums){
+    String htmlRow = "<tr>";
+    for (int i = 0; i < nums.length; i++){
+      htmlRow += "<td>" + nums[i] + "</td>";
+    }
+    return htmlRow + "</tr>";
+  }
   public static String htmlTable(int[][]nums){
-    return "";
+    String table = "<table>";
+    for (int i = 0; i < nums.length; i++){
+      table += htmlTable(nums[i]);
+    }
+    return table + "</table>";
   }
 }
