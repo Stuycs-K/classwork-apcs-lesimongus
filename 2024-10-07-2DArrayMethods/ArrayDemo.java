@@ -16,6 +16,7 @@ public class ArrayDemo{
     System.out.println(Arrays.deepToString(test1));
     System.out.println(Arrays.deepToString(copy(test1)));
     System.out.println(test1 == copy(test1));
+    System.out.println(htmlTable(test1));
   }
 
   //0. Include your prior methods to help you print a 1D/2D array of ints.
