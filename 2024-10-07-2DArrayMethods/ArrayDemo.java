@@ -5,6 +5,18 @@ public class ArrayDemo{
     //You can now use Arrays.toString(yourArray) instead of writing arrayToString again.
     //Compare Arrays.toString(yourArray) to YOUR arrayToString() method to make sure yours is correct
     //do not use any other Arrays.method()
+    int[][] test = {{-49, 7, 1, -1}, {3, 4, -5, 3}, {-1, -9, -6, 18}};
+    System.out.println(Arrays.deepToString(test));
+    System.out.println(arrToString(test));
+    System.out.println(Arrays.deepToString(test).equals(arrToString(test)));
+    System.out.println(countZeros2D(test));
+    System.out.println(arr2DSum(test));
+    System.out.println(Arrays.deepToString(swapRC(test)));
+    replaceNegative(test);
+    System.out.println(Arrays.deepToString(test));
+    System.out.println(Arrays.deepToString(copy(test)));
+    System.out.println(test == copy(test));
+    System.out.println(htmlTable(test));
     int[][] test1 = {{-2, 4, -3}, {0, 0, 1}, {7, 3, -1}};
     System.out.println(Arrays.deepToString(test1));
     System.out.println(arrToString(test1));
