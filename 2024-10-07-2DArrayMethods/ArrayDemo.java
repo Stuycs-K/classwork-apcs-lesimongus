@@ -17,6 +17,18 @@ public class ArrayDemo{
     System.out.println(Arrays.deepToString(copy(test1)));
     System.out.println(test1 == copy(test1));
     System.out.println(htmlTable(test1));
+    int[][] test2 = {{2, 3}, {-4, 1}, {-1, 3}, {0, 0}};
+    System.out.println(Arrays.deepToString(test2));
+    System.out.println(arrToString(test2));
+    System.out.println(Arrays.deepToString(test2).equals(arrToString(test2)));
+    System.out.println(countZeros2D(test2));
+    System.out.println(arr2DSum(test2));
+    System.out.println(Arrays.deepToString(swapRC(test2)));
+    replaceNegative(test2);
+    System.out.println(Arrays.deepToString(test2));
+    System.out.println(Arrays.deepToString(copy(test2)));
+    System.out.println(test2 == copy(test2));
+    System.out.println(htmlTable(test2));
   }
 
   //0. Include your prior methods to help you print a 1D/2D array of ints.
