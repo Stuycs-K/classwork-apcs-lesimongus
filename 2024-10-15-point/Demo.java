@@ -31,5 +31,8 @@ public class Demo{
     System.out.println( distance(p3,p6));
     System.out.println( Point.distance(p1,p2));
     System.out.println( p1.distanceTo(p2));
+    System.out.println( p2.distanceTo(p9));
+    System.out.println( p7.distanceTo(p5));
+    System.out.println( p3.distanceTo(p6));
   }
 }
