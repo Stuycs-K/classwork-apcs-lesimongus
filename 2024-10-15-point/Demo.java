@@ -30,6 +30,10 @@ public class Demo{
     System.out.println( distance(new Point(10,10), p10));
     System.out.println( distance(p3,p6));
     System.out.println( Point.distance(p1,p2));
+    System.out.println( Point.distance(p2,p9));
+    System.out.println( Point.distance(p7,p5));
+    System.out.println( Point.distance(new Point(10,10),p10));
+    System.out.println( Point.distance(p3,p6));
     System.out.println( p1.distanceTo(p2));
     System.out.println( p2.distanceTo(p9));
     System.out.println( p7.distanceTo(p5));
