@@ -10,13 +10,13 @@ public class TriangleTester{
       side[i]=input.nextInt();
       i++;
     }
-    if (side[0] + side[1] < side[2]){
+    if (side[0] + side[1] <= side[2]){
       return false;
     }
-    if (side[1]+side[2] < side[0]){
+    if (side[1]+side[2] <= side[0]){
       return false;
     }
-    if (side[0] + side[2] < side[1]){
+    if (side[0] + side[2] <= side[1]){
       return false;
     }
     return true;
@@ -34,7 +34,7 @@ public class TriangleTester{
       return result;
     } catch(FileNotFoundException ex){
         System.out.println("file not found");
-        return;
+        return 0;
     }
   }
   public static void main(String[] args){
