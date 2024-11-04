@@ -45,13 +45,11 @@ public class TriangleTester{
       String triangle = "";
       String triangle1 = "";
       String triangle2 = "";
-      while (input.hasNextLine()){
+      while (input.hasNextInt()){
         for (int i = 0; i < 3; i++){
-          for (int j = 0; j < 3; j++){
             triangle+= input.nextInt()+ " ";
             triangle1+= input.nextInt()+ " ";
             triangle2+= input.nextInt()+ " ";
-          }
         }
         if (isTriangle(triangle)){
           result++;
