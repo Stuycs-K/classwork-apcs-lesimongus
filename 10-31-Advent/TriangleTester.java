@@ -70,6 +70,16 @@ public class TriangleTester{
       return 0;
     }
   }
+  public static int countTrianglesC(String filename){
+    try{
+      File file = new File(filename);
+      Scanner input = new Scanner(file);
+      int result = 0;
+      while (input.hasNextLine()){
+        String line = input.nextLine();
+
+      }
+  }
   public static void main(String[] args){
     System.out.println(countTrianglesA("inputTri.txt"));
     System.out.println(countTrianglesB("inputTri.txt"));
