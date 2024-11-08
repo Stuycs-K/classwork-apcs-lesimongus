@@ -1,7 +1,9 @@
-//8. What is the difference before and after you override this method? What does this tell us about methods that are overridden?
-//After overriding the method, only the bird constructor uses the overridden method: the original Animal constructor still uses the old method.
-//This tells us that if you override a method in a subclass, you can still access the origianal method.
-
+//After overriding the method, only the bird constructor uses the overridden method
+//However, the original Animal constructor still uses the old method.
+//This tells us that if you override a method in a subclass, you can still access the original method.
+//The only one that didnt work was Bird = new Animal();. This is likely because the constructor for animal
+//does not have enough parameters to fill in for bird, which can't function 
+//because it is missing parameters.
 public class Driver{
   public static void main(String[] args) {
     Animal cat = new Animal ("meow", 2, "green mario");
