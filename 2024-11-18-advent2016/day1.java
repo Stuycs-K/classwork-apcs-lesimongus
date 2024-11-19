@@ -47,9 +47,9 @@ public class day1{
         xdist-= magnitude;
       }
     }
-    return xdist + ydist;
+    return Math.abs(xdist + ydist);
   }
   public static void main(String[] args){
-    System.out.println(Arrays.toString(parse("input.txt")));
+    System.out.println(distance(parse("input.txt")));
   }
 }
