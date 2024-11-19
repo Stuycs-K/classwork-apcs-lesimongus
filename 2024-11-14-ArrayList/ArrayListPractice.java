@@ -24,7 +24,7 @@ public class ArrayListPractice{
     //return a new ArrayList that is in the reversed order of the original.
     int ogsize = original.size();
     ArrayList<String>answer = new ArrayList<String>(ogsize);
-    for (int i = 0; i > ogsize; i++){
+    for (int i = 0; i < ogsize; i++){
       answer.add(i, original.get((ogsize - 1) - i));
     }
     return answer;
