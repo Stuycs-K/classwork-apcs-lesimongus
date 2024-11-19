@@ -15,15 +15,40 @@ public class day1{
     }
     return null;
   }
-  /* public static int distance(String filename){
-    Scanner a = new Scanner(filename);
+  public static int distance(String[] directions){
     int angle = 0;
     int xdist = 0;
     int ydist = 0;
-    while (a.hasNext()){
-
+    for (int i = 0; i < directions.length; i++){
+      String direction = directions[i].substring(0, 1);
+      int magnitude = Integer.parseInt(directions[i].substring(1));
+      if (direction.equals("R")){
+        angle+= 90;
+      }
+      else{
+        angle-= 90;
+      }
+      if (angle < 0){
+        angle = 360 + angle;
+      }
+      if (angle == 360){
+        angle = 0;
+      }
+      if (angle == 0){
+        ydist+= magnitude;
+      }
+      if (angle == 90){
+        xdist+= magnitude;
+      }
+      if (angle == 180){
+        ydist-= magnitude;
+      }
+      if (angle == 270){
+        xdist-= magnitude;
+      }
     }
-  } */
+    return xdist + ydist;
+  }
   public static void main(String[] args){
     System.out.println(Arrays.toString(parse("input.txt")));
   }
