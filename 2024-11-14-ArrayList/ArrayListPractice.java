@@ -29,9 +29,29 @@ public class ArrayListPractice{
     }
     return answer;
   }
-  //public static ArrayList<String> mixLists( ArrayList<String> a,  ArrayList<String> b){
+  public static ArrayList<String> mixLists( ArrayList<String> a,  ArrayList<String> b){
     //return a new ArrayList that has all values of a and b in alternating order that is:
     //a[0], b[0], a[1], b[1]...
     //If one list is longer than the other, just attach the remaining values to the end.
-  //}
+    int limitSize = a.size();
+    if (a.size() > b.size()){
+      limitSize = b.size();
+    }
+    ArrayList<String>answer = new ArrayList<String>(a.size() + b.size());
+    for (int i = 0; i < limitSize; i++){
+      answer.add(a.get(i));
+      answer.add(b.get(i));
+    }
+    if (a.size() > limitSize){
+      for (int i = limitSize; i < a.size(); i++){
+        answer.add(a.get(i));
+      }
+    }
+    if (b.size() > limitSize){
+      for (int i = limitSize; i < b.size(); i++){
+        answer.add(b.get(i));
+      }
+    }
+    return answer;
+  }
 }
