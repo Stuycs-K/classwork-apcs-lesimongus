@@ -28,26 +28,23 @@ public class day1{
       else{
         angle-= 90;
       }
-      if (angle < 0){
-        angle = 360 + angle;
-      }
-      if (angle == 360){
+      if (angle == 360 || angle == -360){
         angle = 0;
       }
       if (angle == 0){
         ydist+= magnitude;
       }
-      if (angle == 90){
+      if (angle == 90 || angle == -270){
         xdist+= magnitude;
       }
-      if (angle == 180){
+      if (angle == 180 || angle == -180){
         ydist-= magnitude;
       }
-      if (angle == 270){
+      if (angle == 270 || angle == -90){
         xdist-= magnitude;
       }
     }
-    return Math.abs(xdist + ydist);
+    return Math.abs(xdist) + Math.abs(ydist);
   }
   public static void main(String[] args){
     System.out.println(distance(parse("input.txt")));
