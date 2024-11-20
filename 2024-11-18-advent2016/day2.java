@@ -4,30 +4,48 @@ import java.io.FileNotFoundException;
 import java.util.Arrays;
 
 public class day2{
-  public static String[] parse(String filename){
+  public static String password(String filename){
     try{
       File file = new File(filename);
       Scanner a = new Scanner(file);
-      int length = 0;
+      String line;
+      int[][] keypad = {{1,2,3}, {4,5,6}, {7,8,9}};
+      int x = 1;
+      int y = 1;
+      String word = "";
       while (a.hasNextLine()){
-        length++;
-        a.nextLine();
+        line = a.nextLine();
+        for (int i = 0; i < line.length(); i++){
+          if (line.charAt(i) == 'U'){
+            if (y>0){
+              y--;
+            }
+          }
+          if (line.charAt(i) == 'D'){
+            if (y<2){
+              y++;
+            }
+          }
+          if (line.charAt(i) == 'R'){
+            if (x<2){
+              x++;
+            }
+          }
+          if (line.charAt(i) == 'L'){
+            if (x>0){
+              x--;
+            }
+          }
+        }
+        word+= keypad[x][y];
       }
-      String[] directions = new String[length];
-      int i = 0;
-      while (a.hasNextLine()){
-        String direction = a.nextLine();
-        System.out.println(direction);
-        directions[i] = direction;
-        i++;
-      }
-      return directions;
+      return word;
     }catch(Exception e){
       System.out.println("no file");
     }
     return null;
   }
   public static void main(String[] args){
-    System.out.println(Arrays.toString(parse("input1.txt")));
+    System.out.println(password("input1.txt"));
   }
 }
