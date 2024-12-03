@@ -37,7 +37,7 @@ public class day2{
             }
           }
         }
-        word+= keypad[x][y];
+        word+= keypad[y][x];
       }
       return word;
     }catch(Exception e){
