@@ -44,6 +44,36 @@ public class Driver{
       System.out.print("=");
       Text.color(Text.background(Text.BLACK));
     }
+    for (int i = 0; i < 10; i++){
+      Text.go(10 + i, 10);
+      Text.color(Text.background(Text.WHITE));
+      System.out.print(" ");
+    }
+    for (int i = 0; i < 20; i++){
+      Text.go(15, 10 + i);
+      Text.color(Text.background(Text.WHITE));
+      System.out.print(" ");
+    }
+    for (int i = 0; i < 10; i++){
+      Text.go(10 + i, 30);
+      Text.color(Text.background(Text.WHITE));
+      System.out.print(" ");
+    }
+    for (int i = 0; i < 20; i++){
+      Text.go(10, 50 + i);
+      Text.color(Text.background(Text.WHITE));
+      System.out.print(" ");
+    }
+    for (int i = 0; i < 10; i++){
+      Text.go(10 + i, 60);
+      Text.color(Text.background(Text.WHITE));
+      System.out.print(" ");
+    }
+    for (int i = 0; i < 20; i++){
+      Text.go(20, 50 + i);
+      Text.color(Text.background(Text.WHITE));
+      System.out.print(" ");
+    }
     Text.go(31, 80);
   }
 
