@@ -28,7 +28,7 @@ public class Driver{
     int[] rando = rand(3);
     int wherePlace = 80 / 3;
     for (int i = 0; i < 3; i++){
-      Text.go(wherePlace * (i+1), 1);
+      Text.go(1, wherePlace * (i+1));
       if (rando[i] < 25){
         Text.color(Text.RED, Text.background(Text.BLACK),Text.BRIGHT);
       }
@@ -38,6 +38,13 @@ public class Driver{
       System.out.print(rando[i]);
       Text.color(Text.WHITE);
     }
+    Text.go(2, 0);
+    for (int i = 0; i < 80; i++){
+      Text.color(Text.background(Text.RED));
+      System.out.print("=");
+      Text.color(Text.background(Text.BLACK));
+    }
+    Text.go(31, 80);
   }
 
 }
