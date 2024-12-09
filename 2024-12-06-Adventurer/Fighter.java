@@ -7,7 +7,7 @@ public class Fighter extends Adventurer{
   }
   public Fighter (String name, int resolve, int wrath){
     super(name);
-    if (resolve < 20 && resolve > 0){
+    if (resolve <= 20 && resolve > 0){
       this.resolve = resolve;
     }
     else{
@@ -53,11 +53,14 @@ public class Fighter extends Adventurer{
 
   //heall or buff self
   public String support(){
-
+    int newHP = getHP() + (int)(resolve/4);
+    setHP(newHP);
+    return getName() + "'s resolve let them pull through!";
   }
 
   //hurt or hinder the target adventurer, consume some special resource
   public String specialAttack(Adventurer other){
-
+    other.setHP(other.getHP() - (3 + (int)(getSpecial() / 10)));
+    return getName() + " unleashed their wrath!";
   }
 }
