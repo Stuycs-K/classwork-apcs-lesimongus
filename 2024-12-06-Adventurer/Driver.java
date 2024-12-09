@@ -1,6 +1,6 @@
 public class Driver{
   public static void main(String[] args){
-    Adventurer p = new Fighter("Mark", 20, 100);
+    Adventurer p = new Fighter("Mark",15, 20, 100);
     Adventurer p1 = new Fighter("Bob");
     System.out.println(p);
     System.out.println(p1);

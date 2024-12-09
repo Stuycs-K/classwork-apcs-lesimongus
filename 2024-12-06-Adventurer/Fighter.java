@@ -5,8 +5,8 @@ public class Fighter extends Adventurer{
     resolve = 10;
     wrath = 0;
   }
-  public Fighter (String name, int resolve, int wrath){
-    super(name);
+  public Fighter (String name, int hp, int resolve, int wrath){
+    super(name, hp);
     if (resolve <= 20 && resolve > 0){
       this.resolve = resolve;
     }
@@ -21,7 +21,7 @@ public class Fighter extends Adventurer{
     }
   }
   public String getSpecialName(){
-    return this.getName() + "'s power is wrath";
+    return "wrath";
   }
   public int getSpecial(){
     return this.wrath;
@@ -60,7 +60,10 @@ public class Fighter extends Adventurer{
 
   //hurt or hinder the target adventurer, consume some special resource
   public String specialAttack(Adventurer other){
-    other.setHP(other.getHP() - (3 + (int)(getSpecial() / 10)));
-    return getName() + " unleashed their wrath!";
+    if (getSpecial() >= 10){
+      other.setHP(other.getHP() - (3 + (int)(getSpecial() / 10)));
+      return getName() + " unleashed their wrath!";
+    }
+    return getName() + "does not have enough" + getSpecialName();
   }
 }
